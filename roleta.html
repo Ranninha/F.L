@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/1024499.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>Fenty Luck - Roda da Sorte</title>
+</head>
+
+<body>
+    
+    <header>
+        <h1>Fenty Luck</h1>
+        <p>Teste sua sorte girando a roda para ganhar prêmios incríveis!</p>
+        <a id="dark-mode-botao">Modo Escuro/Claro</a>
+      </header>    
+
+  <div class="inicio">
+    <div class="numero">
+      <p>Escolha três números</p>
+      <button class="numero" value="1">1</button>
+      <button class="numero" value="2">2</button>
+      <button class="numero" value="3">3</button>
+      <button class="numero" value="4">4</button>
+      <button class="numero" value="5">5</button>
+      <button class="numero" value="6">6</button>
+      <button class="numero" value="7">7</button>
+      <button class="numero" value="8">8</button>
+      <button class="numero" value="9">9</button>
+      <button class="numero" value="10">10</button>
+      <button class="numero" value="11">11</button>
+      <button class="numero" value="12">12</button>
+      <button class="numero" value="13">13</button>
+      <button class="numero" value="14">14</button>
+      <button class="numero" value="15">15</button>
+    </div>
+
+    <main class="container">
+      <div class="pointer"></div>
+      <div class="wheel-container">
+        <div class="wheel" id="wheel"></div>
+        <div class="wheel-number" id="wheelNumber"></div>
+      </div>
+
+      <button class="girarRoda" id="girarRoda">Girar a Roda</button>
+      <div class="result" id="result"></div>
+      <section class="history">
+        <h2>Histórico de Prêmios</h2>
+        <ul id="prizeHistory"></ul>
+        <button id="limparStorage">Limpar Histórico</button>
+      </section>
+    </main>
+  </div>
+
+
+ <div class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2></h2>
+      </div>
+      <div class="modal-body">
+        <p>Seja bem vindo à nossa roleta!</p>
+      </div>
+    </div>
+
+  </div>
+  <footer>
+    <p>Boa sorte! Aproveite seus prêmios exclusivos.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+</body>
+</html>

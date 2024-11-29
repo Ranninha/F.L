@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --body-bg-color: pink;
+  --body-text-color: pink;
+  --header-bg-color: pink;
+  --header-text-color: #fff;
+  --inicio-bg-color: #f7e6f2;
+  --inicio-text-color: pink;
+  --footer-bg-color: pink;
+  --footer-text-color:#fff;
+  --regras-bg-color: pink;
+  --regras-text-color: #fff;
+  --regras-hover: rgb(255, 197, 247);
+  --jogar-bg-color: pink;
+  --jogar-text-color: #fff;
+  --jogar-hover: rgb(255, 139, 207);
+  --girar-bg-color: pink;
+  --girar-text-color: #fff;
+  --girar-hover: rgb(255, 139, 207);
+  --result-text-color: pink;
+  --history-bg-color: pink;
+  --history-text-color: #fff;
+  --history-ul-color: gray;
+  --numero-bg-color: rgb(255, 195, 205);
+  --numero-text-color: #fff;
+  --numero-escolhido-bg-color: #ff77a7;
+  --numero-escolhido-text-color: pink;
+  --dark-mode-bg-color: pink;
+  --dark-mode-text-color: white;
+  --btn-bg-color-hover:rgb(255, 139, 207);
+  --clean-bg-color: rgb(255, 139, 207);
+  --clean-text-color: white;
+
+}
+
+.dark-mode {
+  --body-bg-color: pink;
+  --body-text-color: pink;
+  --header-bg-color: pink;
+  --header-text-color: #fff;
+  --inicio-bg-color: #656565;
+  --inicio-text-color: pink;
+  --footer-bg-color: pink;
+  --footer-text-color:#fff;
+  --regras-bg-color: pink;
+  --regras-text-color: #333;
+  --regras-hover: rgb(255, 200, 247);
+  --jogar-bg-color: rgb(237, 177, 212);
+  --jogar-text-color: #fff;
+  --jogar-hover: rgb(255, 139, 207);
+  --girar-bg-color: pink;
+  --girar-text-color: #fff;
+  --girar-hover: rgb(255, 139, 207);
+  --result-text-color: pink;
+  --history-bg-color: pink;
+  --history-text-color: #fff;
+  --history-ul-color: gray;
+  --numero-bg-color: pink;
+  --numero-text-color: #fff;
+  --numero-escolhido-bg-color: #ff77a7;
+  --numero-escolhido-text-color: rgb(0, 0, 0);
+  --dark-mode-bg-color: pink;
+  --dark-mode-text-color: white;
+  --btn-bg-color-hover:rgb(255, 139, 207);
+}
+
+#dark-mode-botao {
+  background-color: var(--dark-mode-bg-color);
+  color: var(--dark-mode-text-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#dark-mode-botao:hover {
+  background-color: var(--btn-bg-color-hover);
+}
+
+
+body {
+  background-color: var(--body-bg-color);
+  color: var(--body-text-color);
+  text-align: center;
+  font-family: "Poppins", serif;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+}
+
+
+header p {
+  margin: 11px 0;
+  text-align: center;
+}
+
+.descricao h2 {
+
+    font-weight: 700;
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+}
+
+.container {
+  padding: 50px;
+  margin: 30px auto;
+  position: relative;
+  max-width: 400px;
+}
+
+
+.wheel-container {
+  position: relative;
+  display: inline-block;
+}
+
+.wheel-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;
+  z-index: 10;
+  pointer-events: none;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+   
+.girarRoda {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: var(--girar-bg-color);
+  color: var(--girar-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.girarRoda:hover {
+  background-color: var(--girar-hover);
+}
+
+.girarRoda:active {
+  opacity: 0.8;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--result-text-color);   
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+footer {
+  margin: 10px;
+  font-size: 1rem;
+  color: var(--footer-text-color);
+  background-color: var(--footer-bg-color);
+}
+
+.history {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--history-bg-color);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  .history h2 {
+    font-size: 1.5rem;
+    color: var(--history-text-color);
+    margin-bottom: 10px;
+  }
+  
+  .history ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .history ul li {
+    font-size: 1rem;
+    color: var(--history-ul-color);
+    margin: 5px 0;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+  }
+  
+#limparStorage {
+    background-color: var(--clean-bg-color);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--clean-text-color);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+  header, footer {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #000;
+    position: relative;
+    background: conic-gradient(
+  #660342 0% 20%,  /* Rosa claro */
+  #ff69b4 20% 40%, /* Rosa choque */
+  #ff1493 40% 60%, /* Rosa profundo */
+  #b533a4 60% 80%, /* Rosa médio */
+  #ff1493 40% 60% /* Rosa bebê */
+);
+
+  }
+  
+  .pointer {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid #fff1f1;
+    position: absolute;
+    top: 24px;
+    left: 176px;
+  }
+
+button.numero {
+    padding: 5px 10px;
+    font-weight: bold;
+    background-color: var(--numero-bg-color);
+    border: none;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .numeros {
+    padding-top: 10px;
+  }
+  
+  .numero .escolhido{
+    background-color:var(--numero-escolhido-bg-color);
+  }
+
+  /* The Modal (background) */
+/* Modal Content */
+.modal-content {
+  position: absolute;
+  background-color: #fefefe;
+  width: 300px; /* Largura fixa para simular o formato */
+  height: 500px; /* Altura fixa para a proporção 3:4 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 20px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Imagem do Produto */
+.produto-imagem {
+  width: 60%; /* Ajusta a largura da imagem */
+  height: auto; /* Mantém a proporção */
+  margin-top: 20px;
+  border-radius: 10px; /* Bordas arredondadas para a imagem */
+}
+
+
+/* Texto dentro do modal */
+.modal-header {
+  font-size: 1.5rem;
+  color: #ff69b4;
+  font-weight: bold;
+}
+
+.modal-body {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Fundo escuro do modal */
+.modal {
+  font-size: 18px;
+  font-weight: 800;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+.inicio {
+  background: var(--inicio-bg-color);
+  padding: 120px 20px;
+  text-align: center;
+  color: var(--inicio-text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inicio h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.inicio p {
+  font-size: 24px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  animation: fadeInDown 1.2s ease-in-out;
+}
+
+/*página inicial botões*/
+.caixa {
+  display: flex;
+  gap: 20px;
+}
+
+.regras {
+  background-color: var(--regras-bg-color);
+  color: var(--regras-text-color);
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.regras:hover {
+  background-color: var(--regras-hover);
+  transform: scale(1.05);
+}
+
+.jogar {
+  background-color: var(--jogar-bg-color);
+  color: var(--jogar-text-color);
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 30%;
+  border-color: #000;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.jogar:hover {
+  background-color: var(--jogar-hover);
+  transform: scale(1.05);
+}
+
+.corRosa {
+  color: #ff69b4;
+  font-weight: bold;
+}
+
+.corCinza {
+  color: #333;
+  font-weight: bold;
+}
